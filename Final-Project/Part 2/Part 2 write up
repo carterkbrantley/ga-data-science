@@ -1,0 +1,61 @@
+# Project Design Writeup and Approval Template
+
+Follow this as a guide to completing the project design writeup. The questions for each section are merely there to suggest what the baseline should cover; be sure to use detail as it will make the project much easier to approach as the class moves on.
+
+## Project Problem and Hypothesis
+### What's the project about? What problem are you solving?
+I want to look at the points per possession of each player and effective field goal percentage for different play types. I will look at isolations, post-ups, spot-ups, hand-offs, and off screens. I want to also look at frequency of each play type based upon team. 
+Ultimately I want to compare the frequency of each play type per team and per player during the normal course of a game (i.e shot clock or game clock greater than 5 seconds) compared to the frequency of each play type per team and per player during the end of a shot clock or game clock (i.e clock has less than 5seconds remaining). 
+Last I will look at the oppositions defense as well. There is data for all of the stats above from the defenses perspective. For example, the 76ers give up an average of 1.03ppp on spot-ups, but only .81ppp in isolation. So it might make more sense to run more spot-up plays against the 76ers as compared to isolations. 
+This will matter to NBA owners, management, players, coaches, and fans alike. It will help coaches make better decisions, players be put in scenarios to better succeed, owners and management lead more successful organizations, and fans enjoy more exciting basketball. 
+
+### Where does this seem to reside as a machine learning problem? Are you predicting some continuous number, or predicting a binary value?
+I will be predicting a continous number. In essence I will be teaching the system based upon historical data what the historical points per possession and effective field goal percentage is for a given player and grouping the players by team. Then the model will provide an output of which individual player and play type has the best chance of success against a given defense with less than 5seconds left on the clock. 
+### What kind of impact do you think it could have?
+Ultimately if coaches are able to make more informed decisions, it will help eliminate some of the biases or 'gut feelings' that drive decisions today. Also if a team knows the type of play that has the best chance of success when the game is on the line, they can practice that play ahead of time. For instance, if the team knows that against the Hawks they should run a pick and roll for their point guard, they could practice that ahead of time and be better prepared thus increasing their odds of success. 
+### What do you think will have the most impact in predicting the value you are interested in solving for?
+I think that the type of play will be the best determiner of success. Knowing that you should run a pick and roll against opponent X because they defend that play poorly will have the largest impact on success. 
+
+## Datasets
+### Description of data set available, at the field level (see table)
+The NBA currently collects and tracks a plethora of different stats and player movements. I want to look at the points per possession of each player and effective field goal percentage for different play types. I will look at isolations, post-ups, spot-ups, hand-offs, and off screens. I want to also look at frequency of each play type based upon team.
+http://savvastjortjoglou.com/nba-play-by-play-movements.html
+http://stats.nba.com/playtype/#!/misc/?dir=1&PT=player&OD=offensive&sort=Percentile
+https://github.com/seemethere/nba_py/tree/master/nba_py
+### If from an API, include a sample return (this is usually included in API documentation!) (if doing this in markdown, use the javacription code tag)
+I have done actually connected to the API and returned any data yet, but the above URLs contain examples of the data returned as well as one person who has mapped out the entire API so it is easy to find the different values I will be looking to return. 
+
+## Domain knowledge
+### What experience do you already have around this area?
+I am very familar with basketball and the data the NBA is tracking. I already look at this data frequently as well as understand how my proposed model could impact basketball decisions. 
+
+### Does it relate or help inform the project in any way?
+Clearly having familiarity with the data can only help as well as basketball knowledge will help. 
+### What other research efforts exist?
+    * Use a quick Google search to see what approaches others have made, or talk with your colleagues if it is work related about previous attempts at similar problems.
+    * This could even just be something like "the marketing team put together a forecast in excel that doesn't do well."
+    * Include a benchmark, how other models have performed, even if you are unsure what the metric means.
+I have found other websites that have used Python and the NBA API to do analysis. I am referencing those to help make sure my idea is feasible as well as using the map of the NBA API that one user has created
+
+## Project Concerns
+### What questions do you have about your project? What are you not sure you quite yet understand? (The more honest you are about this, the easier your instructors can help).
+I am worried about the vast amount of data that the NBA collects and making sure that I am using the correct data/inputs to do my analysis. I am also worried about the visualization portion. I have some JavaScript experience, but worried I will not be able to visualize the data as well as I would like. I also have not explored the different analysis techniques yet to know which ones are worth while. Last, I am not sure if I need to cleanse or transform my data before I begin my analysis. 
+### What are the assumptions and caveats to the problem?
+I am assuming that the data is correct, as well as that players do not improve/decline or traded. This model will only be able to capture their current ability and not be able to say next season or in 3 years what will be the right play. Also, player's performance might vary if they are on a different team, so I can not say one player's point per possesion for a driving layup will be the same on Team B if they play for Team A. 
+##### What data do you not have access to but wish you had?
+    Nothing comes to mind
+##### What is already implied about the observations in your data set? For example, if your primary data set is twitter data, it may not be representative of the whole sample (say, predicting who would win an election)
+* What are the risks to the project?
+    * What's the cost of your model being wrong? (What's the benefit of your model being right?)
+    It is tough to say that the model is wrong since it is just taking into account who will have the best chance of scoring in a given situation. Nevertheless, if the model poorly predicts who should shoot at the end, then potentially basketball games could be on the line
+    * Is any of the data incorrect? Could it be incorrect?
+    Not that I know of
+
+### Outcomes
+* What do you expect the output to look like?
+* What does your target audience expect the output to look like?
+* What gain do you expect from your most important feature on its own?
+* How complicated does your model have to be?
+* How successful does your project have to be in order to be considered a "success"?
+* What will you do if the project is a bust (this happens! but it shouldn't here)?
+
