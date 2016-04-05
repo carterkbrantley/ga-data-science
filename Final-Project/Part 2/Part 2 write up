@@ -51,11 +51,16 @@ I am assuming that the data is correct, as well as that players do not improve/d
     * Is any of the data incorrect? Could it be incorrect?
     Not that I know of
 
-### Outcomes
-* What do you expect the output to look like?
-* What does your target audience expect the output to look like?
-* What gain do you expect from your most important feature on its own?
-* How complicated does your model have to be?
-* How successful does your project have to be in order to be considered a "success"?
-* What will you do if the project is a bust (this happens! but it shouldn't here)?
-
+## Outcomes
+### What do you expect the output to look like?
+I expect to have a model that I can input a team match up and be able to say that with 3 seconds left on the clock you should use player X and run play Y. 
+### What does your target audience expect the output to look like?
+The target audience is coaches/NBA management for a specific team, so I would expect them to put in their opponent and know which player and play to run.
+### What gain do you expect from your most important feature on its own?
+Not sure how an individual feature would gain from this model. Maybe players will better understand defenses weakness and be able to exploit those better, thus making them more valuable players?
+### How complicated does your model have to be?
+I believe by teaching the model based upon historical data and running random forest trees, the model does not have to be overly complicated. One of the keys will be to account for the most important features and possibly control for features I will not be inputing into the model. 
+### How successful does your project have to be in order to be considered a "success"?
+Having a working model that allows for input of a matchup and be able to output the best player and play
+### What will you do if the project is a bust (this happens! but it shouldn't here)?
+Cry
